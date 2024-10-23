@@ -5,13 +5,13 @@ import { useNavigate } from 'react-router-dom'
 
 export const axiosSecure = axios.create({
   baseURL: import.meta.env.VITE_API_URL,
-  withCredentials: true,
+  withCredentials: true, 
 })
 const useAxiosSecure = () => {
   const { logOut } = useAuth()
   const navigate = useNavigate()
   useEffect(() => {
-    axiosSecure.interceptors.response.use(
+    axiosSecure.interceptors.response.use(  
       res => {
         return res
       },
